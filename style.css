@@ -26,7 +26,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  height: 100%;
 }
 
 body * {
@@ -37,6 +37,12 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#container-lojas {
+  width: 100%;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -98,15 +104,27 @@ body * {
   border-radius: 9999px;
 }
 
+.title-page {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h2 {
+  padding-top: 50px;
+}
+
 ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   padding: 24px 0;
 }
 
-ul li a {
+ul.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul.links li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,9 +139,34 @@ ul li a {
   transition: background 0.2s;
 }
 
-ul li a:hover {
+ul.links li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+}
+
+.stores {
+  display: flex;
+  gap: 5%;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.store {
+  width: 30%;
+}
+
+.store-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.image-store {
+  width: 100%;
 }
 
 #social-links {
